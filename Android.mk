@@ -17,7 +17,7 @@ LOCAL_MODULE:= qcom.fmradio
 
 LOCAL_REQUIRED_MODULES := qcom.fmradio.xml
 
-include $(BUILD_JAVA_LIBRARY)
+#include $(BUILD_JAVA_LIBRARY)
 
 include $(CLEAR_VARS)
 
@@ -32,9 +32,9 @@ include $(BUILD_PREBUILT)
 ifeq ($(BOARD_HAS_QCA_FM_SOC), "cherokee")
 LOCAL_CFLAGS += -DFM_SOC_TYPE_CHEROKEE
 endif
-include $(LOCAL_PATH)/jni/Android.mk
-LOCAL_PATH := $(LOCAL_DIR_PATH)
-include $(LOCAL_PATH)/fmapp2/Android.mk
+#include $(LOCAL_PATH)/jni/Android.mk
+#LOCAL_PATH := $(LOCAL_DIR_PATH)
+#include $(LOCAL_PATH)/fmapp2/Android.mk
 
 #LOCAL_PATH := $(LOCAL_DIR_PATH)
 #include $(LOCAL_PATH)/FMRecord/Android.mk
